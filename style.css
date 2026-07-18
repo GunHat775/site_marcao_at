@@ -1,0 +1,305 @@
+/* ==================== STYLE.CSS - INVESTINICIANTE ==================== */
+
+/* Paleta Violeta Harmoniosa e Profissional (refinada para finanças + acessibilidade) */
+:root {
+    --violet-dark: #2D1B4E;
+    --violet-medium: #3F2A66;
+    --violet-light: #7C3AED;
+    --accent-emerald: #10B981;
+    --text-light: #f3e8ff;
+    --card-bg: #2D1B4E;
+    --border-color: #5B2C6F;
+}
+
+/* Reset e Tipografia */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--text-light);
+    background: #1E1433;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+/* Cabeçalho */
+header {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.header-title {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+/* Cards Gerais */
+.financial-card,
+.bg-\[\#2D1B4E\] {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Image blocks used in 'Compre aqui' sections */
+.image-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    display: block;
+}
+
+.image-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.75rem;
+}
+
+.image-card .caption {
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+/* Hover effect: eleva e escurece o cartão de imagem ao passar o mouse */
+.image-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.15), 0 8px 10px -6px rgb(0 0 0 / 0.15);
+    background-color: var(--violet-medium);
+    border-color: #7C3AED;
+}
+
+.financial-card:hover,
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.15), 
+                0 8px 10px -6px rgb(0 0 0 / 0.15);
+}
+
+/* Tabelas */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 12px 8px;
+    text-align: left;
+}
+
+th {
+    color: #c4b5fd;
+    font-weight: 500;
+    border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:hover {
+    background-color: #3B2A5A;
+}
+
+/* Simulador - Subseções */
+.simulador-subsection {
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+.simulador-subsection:first-child {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Tabela de IR */
+table.ir-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.ir-table th, .ir-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Simulador */
+#result-value,
+#result-value-1,
+#result-value-2 {
+    color: #34d399;
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 1.05;
+    word-break: break-all;
+}
+
+/* Conversor de Moedas */
+#usd-result,
+#eur-result {
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+/* Responsividade Extra */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header-title {
+        font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 640px) {
+    header h1 {
+        font-size: 1.85rem;
+    }
+    
+    .financial-card {
+        padding: 1rem;
+    }
+}
+
+/* Botões */
+button {
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+/* Formulário de Contato */
+input, textarea {
+    transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #7C3AED;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+/* Mensagens de Status */
+.text-emerald-400 {
+    color: #34d399;
+}
+
+/* Ajustes Finais para Mobile */
+@media (max-width: 480px) {
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .result-value {
+        font-size: 1.75rem;
+    }
+}
+
+/* Rotador de frases (fade in/out) */
+.truth-rotator-inner {
+    position: relative;
+    overflow: hidden;
+}
+.truth-phrase {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    font-size: 1.15rem;
+    color: var(--text-light);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.truth-phrase.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Células clicáveis (hover mais evidente) */
+.financial-card {
+    cursor: pointer;
+}
+
+.financial-card:hover {
+    background-color: #3F2A66;
+    border-color: #7C3AED;
+}
+
+/* Rodapé AdSense */
+footer a {
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #c4b5fd;
+}
+
+/* Scroll fade classes */
+.fade-scroll-init {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+.no-transition {
+    transition: none !important;
+}
+
+/* Initial-load fade for index page: keep elements hidden until JS sets .fade-ready
+   Excludes header by targeting main and common card selectors only. */
+/* keep everything in main hidden initially EXCEPT header items; we will
+   exclude elements that are intended to animate on scroll (have
+   .fade-scroll-init) and rotator phrases (.truth-phrase) so they are
+   handled by JS/CSS separately. */
+body.pre-fade main,
+body.pre-fade main *:not(.fade-scroll-init):not(.truth-phrase),
+body.pre-fade .image-card:not(.fade-scroll-init),
+body.pre-fade .financial-card:not(.fade-scroll-init),
+body.pre-fade .card:not(.fade-scroll-init),
+body.pre-fade .rounded-2xl:not(.fade-scroll-init),
+body.pre-fade .rounded-3xl:not(.fade-scroll-init) {
+    opacity: 0 !important;
+    transform: translateY(12px) !important;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When JS sets .fade-ready, reveal all non-scroll elements at once.
+   Keep rotator phrases and scroll-targets untouched. */
+body.pre-fade.fade-ready main,
+body.pre-fade.fade-ready main *:not(.fade-scroll-init):not(.truth-phrase),
+body.pre-fade.fade-ready .image-card:not(.fade-scroll-init),
+body.pre-fade.fade-ready .financial-card:not(.fade-scroll-init),
+body.pre-fade.fade-ready .card:not(.fade-scroll-init),
+body.pre-fade.fade-ready .rounded-2xl:not(.fade-scroll-init),
+body.pre-fade.fade-ready .rounded-3xl:not(.fade-scroll-init) {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Ensure rotator phrases behave only via their own rules */
+.truth-rotator-inner { position: relative; }
+.truth-phrase { opacity: 0; transform: translateY(6px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.truth-phrase.visible { opacity: 1; transform: translateY(0); }
+

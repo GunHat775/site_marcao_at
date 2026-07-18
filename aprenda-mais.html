@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprenda Mais - Investiniciante</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .header-title { font-family: 'Playfair Display', Georgia, serif; }
+    </style>
+</head>
+<body class="bg-[#1E1433] text-white pre-fade">
+    <script src="script.js"></script>
+
+    <!-- CABEÇALHO -->
+    <header class="sticky top-0 z-50 bg-[#2D1B4E] border-b border-violet-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <img src="https://i.postimg.cc/Hx0bbBQq/5409831.png" alt="Ícone Investimento" class="w-20 h-20 md:w-24 md:h-20 object-contain">
+                
+                <div class="text-center">
+                    <h1 class="header-title text-4xl md:text-5xl font-bold tracking-tight">Investiniciante</h1>
+                    <p class="text-violet-300 text-sm -mt-1">Investindo com clareza desde o início</p>
+                </div>
+                
+                <img src="https://i.postimg.cc/C10qMkWH/17116563.png" alt="Ícone Crescimento" class="w-20 h-20 md:w-24 md:h-20 object-contain">
+            </div>
+            
+            <nav class="flex justify-center flex-wrap gap-x-8 gap-y-2 pb-4 text-sm font-medium">
+                <a href="index.html" class="hover:text-violet-300 transition-colors">Início</a>
+                <a href="sobre-nos.html" class="hover:text-violet-300 transition-colors">Sobre Nós</a>
+                <a href="politica-privacidade.html" class="hover:text-violet-300 transition-colors">Política de Privacidade</a>
+                <a href="termos-de-uso.html" class="hover:text-violet-300 transition-colors">Termos de Uso</a>
+                <a href="politica-cookies.html" class="hover:text-violet-300 transition-colors">Política de Cookies</a>
+                <a href="aviso-legal.html" class="hover:text-violet-300 transition-colors">Aviso Legal</a>
+                <a href="contatos.html" class="hover:text-violet-300 transition-colors">Contatos</a>
+                <a href="aprenda-mais.html" class="hover:text-violet-300 transition-colors">Aprenda Mais</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="space-y-8">
+
+
+            <div class="grid grid-cols-2 gap-6">
+                <section class="bg-[#2D1B4E] rounded-3xl p-6 border border-violet-700 min-w-0">
+                    <h2 class="section-title text-2xl font-semibold mb-4 text-center text-violet-300">Invista Nesses Livros</h2>
+                    <div id="books-left" class="grid grid-cols-2 gap-4 mb-6"></div>
+
+                    <h2 class="section-title text-2xl font-semibold mb-5 text-center text-violet-300">Renda Variável</h2>
+                    <div class="space-y-3" id="left-column"></div>
+
+                    <div class="financial-card rounded-2xl p-5 mt-6">
+                        <h3 class="font-bold text-lg mb-4 text-center">Maiores Bancos Brasileiros</h3>
+                        <div id="bancos-basileia" class="space-y-3 text-sm"></div>
+                        <p class="text-xs text-violet-400 mt-4 text-center leading-snug">Índice de Basileia: Mede a solidez financeira dos bancos (mínimo regulatório 8%). Quanto maior, mais capital o banco tem para resistir a crises.</p>
+                    </div>
+
+                    <div class="financial-card rounded-2xl p-5 mt-6">
+                        <h3 class="font-bold text-lg mb-4 text-center">Bancos Digitais Mais Procurados</h3>
+                        <div id="bancos-digitais" class="space-y-3 text-sm"></div>
+                        <p class="text-xs text-violet-400 mt-4 text-center leading-snug">Índice de Basileia: Mede a solidez financeira dos bancos (mínimo regulatório 8%). Quanto maior, mais capital o banco tem para resistir a crises.</p>
+                    </div>
+                </section>
+
+                <section class="bg-[#2D1B4E] rounded-3xl p-6 border border-violet-700">
+                    <h2 class="section-title text-2xl font-semibold mb-4 text-center text-violet-300">Invista Nesses Livros</h2>
+                    <div id="books-right" class="grid grid-cols-2 gap-4 mb-6"></div>
+
+                    <h2 class="section-title text-2xl font-semibold mb-5 text-center text-violet-300">Renda Fixa</h2>
+                    <div class="space-y-3" id="right-column"></div>
+
+                    <div class="mt-8 pt-6 border-t border-violet-700">
+                        <h3 class="text-lg font-semibold mb-4 text-center text-emerald-400">Taxas Atuais (Atualizado em Tempo Real)</h3>
+                        <div id="taxas-atualizadas" class="space-y-3 text-sm bg-[#1E1433] rounded-2xl p-5 border border-violet-700">
+                            <div class="flex justify-between items-center"><span class="font-medium">CDI HOJE</span><span id="cdi-hoje" class="font-bold text-emerald-400">—</span></div>
+                            <div class="flex justify-between items-center"><span class="font-medium">SELIC HOJE</span><span id="selic-hoje" class="font-bold text-emerald-400">—</span></div>
+                            <div class="flex justify-between items-center"><span class="font-medium">POUPANÇA HOJE</span><span id="poupanca-hoje" class="font-bold text-emerald-400">—</span></div>
+                            <div class="flex justify-between items-center"><span class="font-medium">IPCA (último mês)</span><span id="ipca-hoje" class="font-bold text-emerald-400">—</span></div>
+                        </div>
+                        <p class="text-[10px] text-center text-violet-400 mt-3">Dados via APIs oficiais • Atualização automática</p>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-violet-700 bg-[#2D1B4E] rounded-2xl p-6 border border-violet-800">
+                        <div class="flex justify-center mb-4">
+                            <img src="https://i.postimg.cc/jS7VnyP9/871-8719227-quality-service-globo-terrestre-em-desenho.png" alt="Globo Terrestre" class="w-28 h-28 object-contain">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-center">HORÁRIO NOS MAIORES CENTROS FINANCEIROS DO MUNDO</h3>
+                        <div id="horario-mundial" class="space-y-3 text-sm"></div>
+                        <p class="text-[10px] text-center text-violet-400 mt-3">Atualizado em tempo real • Horário de Brasília</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-[#2D1B4E] border-t border-violet-800 mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-10 text-center">
+            <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-violet-300">
+                <a href="index.html" class="hover:text-violet-100">Início</a>
+                <a href="aprenda-mais.html" class="text-emerald-400">Aprenda Mais</a>
+                <a href="sobre-nos.html" class="hover:text-violet-100">Sobre Nós</a>
+                <a href="politica-privacidade.html" class="hover:text-violet-100">Política de Privacidade</a>
+                <a href="termos-de-uso.html" class="hover:text-violet-100">Termos de Uso</a>
+                <a href="politica-cookies.html" class="hover:text-violet-100">Política de Cookies</a>
+                <a href="aviso-legal.html" class="hover:text-violet-100">Aviso Legal</a>
+                <a href="contatos.html" class="hover:text-violet-100">Contatos</a>
+                <a href="aprenda-mais.html" class="hover:text-violet-300 transition-colors">Aprenda Mais</a>
+            </div>
+            <p class="mt-6 text-xs text-violet-400">© 2026 Investiniciante. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function atualizarHorarios() {
+            const container = document.getElementById('horario-mundial');
+            if (!container) return;
+            const capitais = [
+                {cidade:'Nova York (EUA)', tz:'America/New_York'},
+                {cidade:'Londres (UK)', tz:'Europe/London'},
+                {cidade:'Singapura', tz:'Asia/Singapore'},
+                {cidade:'Hong Kong', tz:'Asia/Hong_Kong'},
+                {cidade:'Tóquio (Japão)', tz:'Asia/Tokyo'},
+                {cidade:'Xangai (China)', tz:'Asia/Shanghai'},
+                {cidade:'Dubai (EAU)', tz:'Asia/Dubai'},
+                {cidade:'Zurique (Suíça)', tz:'Europe/Zurich'},
+                {cidade:'Frankfurt (Alemanha)', tz:'Europe/Berlin'},
+                {cidade:'Sydney (Austrália)', tz:'Australia/Sydney'},
+                {cidade:'Paris (França)', tz:'Europe/Paris'},
+                {cidade:'Toronto (Canadá)', tz:'America/Toronto'},
+                {cidade:'São Paulo (Brasil)', tz:'America/Sao_Paulo'}
+            ];
+            let html = '';
+            const agora = new Date();
+            capitais.forEach(c => {
+                const hora = agora.toLocaleTimeString('pt-BR', { timeZone: c.tz, hour:'2-digit', minute:'2-digit' });
+                html += `<div class="flex justify-between items-center bg-[#1E1433] p-3 rounded-xl"><span class="font-medium">${c.cidade}</span><span class="font-mono text-emerald-400">${hora}</span></div>`;
+            });
+            container.innerHTML = html;
+        }
+
+        window.addEventListener('load', () => {
+            atualizarHorarios();
+            setInterval(atualizarHorarios, 30000);
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
